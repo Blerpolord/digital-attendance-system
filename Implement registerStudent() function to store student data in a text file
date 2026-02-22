@@ -1,0 +1,14 @@
+// student.cpp (continued)
+void registerStudent() {
+    string idx, name, prog;
+    cout << "Enter index number: ";
+    cin >> idx;
+    cout << "Enter name: ";
+    cin >> name;
+    cout << "Enter programme: ";
+    cin >> prog;
+    Student s(idx, name, prog);
+    ofstream file("students.txt", ios::app);
+    file << s.indexNumber << "," << s.name << "," << s.programme << endl;
+    file.close();
+}
